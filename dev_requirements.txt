@@ -81,7 +81,7 @@ importlib-metadata==4.11.4
     #   redis
 importlib-resources==5.7.1
     # via alembic
-ipython==7.31.1
+ipython==8.10.0
     # via caveclient
 itsdangerous==1.1.0
     # via flask
