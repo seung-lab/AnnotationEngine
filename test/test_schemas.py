@@ -63,6 +63,8 @@ def test_metadata_with_optional_metadata_schema():
         "voxel_resolution_x": 4,
         "voxel_resolution_y": 4,
         "voxel_resolution_z": 40,
+        "read_permission": "PUBLIC",
+        "write_permission": "PRIVATE",
     }
     schema = MetadataSchema()
     result = schema.load(data)
@@ -92,6 +94,8 @@ def test_create_table_schema():
             "voxel_resolution_x": 4,
             "voxel_resolution_y": 4,
             "voxel_resolution_z": 40,
+            "read_permission": "PUBLIC",
+            "write_permission": "PRIVATE",
         },
     }
     schema = CreateTableSchema()
@@ -157,6 +161,8 @@ def test_full_metadata_schema():
         "voxel_resolution_x": 4,
         "voxel_resolution_y": 4,
         "voxel_resolution_z": 40,
+        "read_permission": "PUBLIC",
+        "write_permission": "PRIVATE",
     }
     schema = FullMetadataSchema()
     result = schema.load(full_metadata)
@@ -173,3 +179,5 @@ def test_full_metadata_schema():
     assert result["voxel_resolution_x"] == 4
     assert result["voxel_resolution_y"] == 4
     assert result["voxel_resolution_z"] == 40
+    assert result["read_permission"] == "PUBLIC"
+    assert result["write_permission"] == "PRIVATE"

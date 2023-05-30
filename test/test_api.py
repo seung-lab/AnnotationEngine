@@ -29,6 +29,8 @@ class TestTableEndpoints:
                 "voxel_resolution_x": 4,
                 "voxel_resolution_y": 4,
                 "voxel_resolution_z": 40,
+                "read_permission": "PUBLIC",
+                "write_permission": "PRIVATE",
             },
         }
         url = f"/annotation/api/v2/aligned_volume/{aligned_volume_name}/table"
@@ -59,6 +61,8 @@ class TestTableEndpoints:
                 "voxel_resolution_x": 4,
                 "voxel_resolution_y": 4,
                 "voxel_resolution_z": 40,
+                "read_permission": "PUBLIC",
+                "write_permission": "PRIVATE",
             },
         }
         url = f"/annotation/api/v2/aligned_volume/{aligned_volume_name}/table"
@@ -119,6 +123,8 @@ class TestAnnotationTableEndpoints:
                 "reference_table": None,
                 "voxel_resolution_x": 4.0,
                 "voxel_resolution_z": 40.0,
+                "read_permission": "PUBLIC",
+                "write_permission": "PRIVATE",
             }
             assert response.json == metadata
 
